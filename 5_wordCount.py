@@ -1,6 +1,4 @@
 def wordCount(str):
-  words = str.split()
+  return len(str.split(' '))
 
-  print(len(words))
-
-wordCount('hi there you go')
+print(wordCount('hi there'))
