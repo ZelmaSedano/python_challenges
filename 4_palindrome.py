@@ -1,9 +1,4 @@
-def checkPalindrome(str):
-  reversed_str = str[::-1]
-  
-  if(str==reversed_str):
-    print('palindrome')
-  else:
-    print('not a palindrome')
+def palindrome(str):
+    return str == str[::-1]
 
-checkPalindrome('mom')
+print(palindrome('mow'))
