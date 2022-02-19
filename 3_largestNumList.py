@@ -1,4 +1,4 @@
 def largestNum(arr):
-    print(max(arr))
+    return max(arr)
 
-largestNum([1,2,3])
+print(largestNum([3333,3,3333333]))
