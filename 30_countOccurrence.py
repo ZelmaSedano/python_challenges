@@ -1,6 +1,10 @@
-# create a function that returns how many times something is present inside string
-def occurrence(str, target):
-  return str.count(target)
+def countOccurrence(arr, element):
+    if len(arr) == 0:
+        print('please add elements to list')
+    count = 0
+    for i in arr:
+        if(i == element):
+            count+=1
+    return count
 
-print(occurrence('bye bye bye', 'bye'))
-
+print(countOccurrence([1,2,3],3))
