@@ -1,4 +1,4 @@
-str = ' hi there  '
-newStr = str.replace(' ', '')
+def removeSpaces(str):
+    return str.replace(' ', '')
 
-print(newStr)
+print(removeSpaces('hi there'))
