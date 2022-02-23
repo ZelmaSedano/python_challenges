@@ -1,12 +1,7 @@
-def isNumPrime(num):
-  if num > 1:
-    for i in range(2, num):
-      if(num % i ==0):
-        print('is not a prime')
-        break
-      if(num % i != 0):
-        print('is a prime')
-        break
+def is_prime(num):
+    for n in range(2, int(num*1/2)+1):
+        if num % n == 0:
+            return False
+    return True
 
-
-isNumPrime(6)
+print(is_prime(27))
