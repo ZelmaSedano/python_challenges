@@ -1,4 +1,4 @@
 def sortLetters(str):
-  print(''.join(sorted(str)))
+  return sorted(str)
 
-sortLetters('hithere')
+print(sortLetters('hithere'))
