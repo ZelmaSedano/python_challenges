@@ -1,6 +1,3 @@
-from heapq import merge
-
-
 def mergeLists(list1, list2):
     return list1+list2
 
