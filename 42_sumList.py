@@ -1,7 +1,4 @@
-def sum_list(list):
-    total = 0
-    for i in list:
-        total += i
-    return total
+def sumList(list):
+    return sum(list)
 
-print('The sum is', sum_list([1,2,3]))
+print(sumList([1,2,3]))
