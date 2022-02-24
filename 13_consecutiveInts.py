@@ -1,11 +1,14 @@
-# check to see if there are two consecutive elements in an array
-def consecutiveInts(arr):
-  for i in range(len(arr) - 1):
-    if(arr[i] == arr[i+1]):
-      bool = True
-    else:
-      bool = False
-  print(bool)
+def consecutive_ints(list):
+    # edge case: if list is empty
+    if not list:
+        return 'please add items to your list'
 
+    for i in range(len(list)-1):
+        if(list[i] == list[i+1]):
+            bool = True
+        else:
+            bool = False
+    # make sure this is out of loop, otherwise it'll return False if the first two elements don't match
+    return bool
 
-consecutiveInts([1,2,1])
+print(consecutive_ints([1,2,3,1,2,3,3,3]))
