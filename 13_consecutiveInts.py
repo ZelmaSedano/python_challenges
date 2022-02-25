@@ -1,14 +1,14 @@
 def consecutive_ints(list):
-    # edge case: if list is empty
+    # check to make sure list isn't empty
     if not list:
-        return 'please add items to your list'
+        return 'please add items to list'
 
-    for i in range(len(list)-1):
+    # the extra -1 keeps 'out of range' from happening
+    for i in range(list[0], list[-1]-1):
         if(list[i] == list[i+1]):
             bool = True
         else:
             bool = False
-    # make sure this is out of loop, otherwise it'll return False if the first two elements don't match
     return bool
 
-print(consecutive_ints([1,2,3,1,2,3,3,3]))
+print(consecutive_ints([1,3,3]))
