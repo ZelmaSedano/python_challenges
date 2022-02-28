@@ -1,6 +1,3 @@
-from tabnanny import check
-
-
 def checkP(str):
     if not str or str.isspace():
         return 'please add some letters to your string'
