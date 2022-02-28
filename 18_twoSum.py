@@ -1,9 +1,13 @@
-# create a function that returns the numbers from an array that add up to target
-def twoSum(arr, target):
-    for i in range(len(arr)-1):
-        for j in range(i + 1, len(arr)):
-            if arr[i] + arr[j] == target:
-                return [arr[i], arr[j]]
+def two_sum(list, target=None):
+    if not list:
+        return 'please add elements to your list'
+    if target is None:
+        return 'please add number to 2nd argument'
+    for i in range(len(list)-1):
+        for j in range(i+1, len(list)):
+            if list[i] + list[j] == target:
+                return [list[i], list[j]]
 
+    return 'no numbers add up to target'
 
-print(twoSum([1,2,3,4,5], 8))
+print(two_sum([], 5))
