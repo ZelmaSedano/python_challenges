@@ -1,13 +1,15 @@
-def wordCount(str):
-    if len(str) == 0:
-        return 'please add some letters'
-    
-    for i in str:
-        if len(str) == 1:
-            if i == ' ':
-                return 'please add letter'
+def longestWord(str):
+    if not str:
+        return 'please add words to string'
+    # create empty longest variable
+    longest = ''
+    # split the str into list of words
+    list = str.split(' ')
 
-    arr = str.split(' ')
-    return len(arr)
+    for i in list:
+        if len(i) > len(longest):
+            longest = i
 
-print(wordCount('hi there'))
+    return longest
+
+print(longestWord(''))
