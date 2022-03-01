@@ -1,5 +1,9 @@
-def mergeList(arr1, arr2):
-  newList = arr1 + arr2
-  print(newList)
+def merge_lists(list1, list2):
+    if not list1:
+        return 'please add elements to list1'
+    if not list2:
+        return 'please add elements to list2'
 
-mergeList([1,2,3], [3,4,5])
+    return list1 + list2
+
+print(merge_lists([1,2,3], [4,5,6]))
