@@ -1,8 +1,10 @@
-def containsDigit(str):
-    for character in str:
-        if character.isdigit():
+def contains_digits(str):
+    # loop through str
+    for i in str:
+        if i.isdigit():
             return True
+
+    # backup
     return False
 
-
-print(containsDigit('hi'))
+print(contains_digits('hi3'))
