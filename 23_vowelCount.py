@@ -1,12 +1,19 @@
-def vowelCount(str):
-  count = 0
+def vowel_count(str):
+    # create a count variable
+    count = 0
 
-  vowel = set('aeiouAEIOU')
+    # create a set of vowels
+    vowels = set('aeiouAEIOU')
 
-  for alphabet in str:
-    if alphabet in vowel:
-      count += 1
-  
-  print('No. of vowels: ', count)
+    # loop through the str
+    for c in str:
+        if c in vowels:
+            count += 1
 
-vowelCount('hi')
+    # backup
+    if count == 0:
+        return 'no vowels'
+    else:
+        return count
+
+print(vowel_count('hi'))
