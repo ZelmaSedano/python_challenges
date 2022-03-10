@@ -1,9 +1,12 @@
+# arr can't be 'list' b/c we're using list to check w/ isinstance - it confuses the computer
 def printNested(arr):
-    for each_item in arr:
-        if isinstance(each_item, list):
-            for nested_item in each_item:
-                print(nested_item)
+    if not arr:
+        return 'please add elements to list'
+    for i in arr:
+        if isinstance(i, list):
+            for j in i:
+                print(j)
         else:
-            print(each_item)
+            print(i)
 
 printNested([1,2,3,[4,5,[6]]])
