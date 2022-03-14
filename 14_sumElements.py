@@ -1,9 +1,15 @@
-def sumElements(arr):
-  sum = 0
+def sum_list(list):
+    # edgecase: if list is empty
+    if not list:
+        return 'please add elements to list'
 
-  for i in range (0,len(arr)):
-    sum += arr[i]
-  
-  print(sum)
+    # create a result variable
+    result = 0
 
-sumElements([1,2,3])
+    # loop through list, adding to result with each loop
+    for i in list:
+        result += i
+
+    return result
+
+print(sum_list([1,2,3,4]))
