@@ -1,7 +1,6 @@
-def isInt(num=None):
-    if num is None:
-        return 'please add a number to the 2nd argument'
+def is_integer(num):
+    # integers can be negative, so no edgecase
 
     return type(num) == int
 
-print(isInt('hi'))
+print(is_integer('hi'))
