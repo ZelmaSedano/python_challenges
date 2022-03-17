@@ -1,10 +1,18 @@
 def common_divisors(num1, num2):
-    divisors = []
-
-    for i in range(1, min(num1, num2)+1):
-        if(num1 % i == 0 and num2 % i == 0):
-            divisors.append(i)
+    # edgecase: if one number is negative
+    if num1 > 0 and num2 < 0:
+        return 'please use only positive or negative numbers'
+    elif num1 < 0 and num2 > 0:
+        return 'please use only positive or negative numbers'
     
-    return divisors
+    # create a variable to return
+    result = []
 
-print(common_divisors(15, 30))
+    # loop through list
+    for i in range(2, num2+1):
+        if(num1 % i == 0 and num2 % i == 0):
+            result.append(i)
+
+    return result
+
+print(common_divisors(15,30))
