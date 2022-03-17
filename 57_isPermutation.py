@@ -1,14 +1,15 @@
 def is_permutation(str1, str2):
-    # edgecase: if str1 AND str2 are empty
-    if not str1 or str1.isspace() and not str2 or str2.isspace():
+    # edgecase: if both strings are empty
+    if not str1 and not str2:
         return 'please add letters to both strings'
-    # edgecase: if str1 or str2 are empty
+    # edgecase: if str1 is empty
     if not str1 or str1.isspace():
-        return 'please add letters to string #1'
+        return 'please add letters to str1'
+    # edgecase: if str2 is empty
     elif not str2 or str2.isspace():
-        return 'please add letters to string #2'
+        return 'please add letters to str2'
 
-    # if the str2 is a permutation os str1, then they will be the same if you sort their letters
+    # if they are permutations of each other, then if each word is sorted they should equal each other
     return sorted(str1) == sorted(str2)
 
-print(is_permutation('', ''))
+print(is_permutation('', 'd'))
