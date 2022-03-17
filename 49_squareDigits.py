@@ -1,5 +1,14 @@
-def squareDigits(num):
-    return ''.join(str(int(i)**2) for i in str(num))
+def square_digits(num):
+    result = []
+
+    words = list(str(num))
+
+    for i in words:
+        y = int(i)
+        result.append(str(y*y))
+
+    newStr = ''.join(result)
+    return int(newStr)
 
 
-print(squareDigits(123))
+print(square_digits(13))
