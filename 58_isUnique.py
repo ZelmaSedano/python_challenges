@@ -1,11 +1,10 @@
 def is_string_unique(str):
     # edgecase: if string is empty
-    if not str or str.isspace():
+    if not str:
         return 'please add letters to string'
 
-    # check to see if string equals set of string
-    # set can change the order of the characters, so you have to sort both string and set to check them against each other
+    # when you create a set in python, it doesn't keep the original order of the elements when it's a string
+    # so you have to sort them
     return sorted(set(str)) == sorted(str)
 
-
-print(is_string_unique('hoo'))
+print(is_string_unique('hi'))
