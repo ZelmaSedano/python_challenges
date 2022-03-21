@@ -1,23 +1,25 @@
-def common_divisors(num1, num2):
-    # edgecases: if both nums aren't negative or positive
-    if num1 < 0 and num1 > 0:
-        return 'please only use positive or negative numbers'
-    elif num1 > 0 and num2 < 0:
-        return 'please only use positive and negative numbers'
+def square_digits(num):
+    # edgecase: if num is negative, can't square
+    if num < 0:
+        return 'please only use positive numbers'
 
-    # create a result variable to add divisors to
+    # create a variable that you can return
     result = []
 
-    # loop from 2 to num2, including num2
-    for i in range(2, num2+1):
-        # if i divides into num1 and 2, add to result
-        if num1 % i == 0 and num2 % i == 0:
-            result.append(i)
+    # cast num into a string and split it into a list
+    arr = list(str(num))
 
-    # if result is empty, return no common divisors
-    if len(result) == 0:
-        return 'no common divisors'
-    else:
-        return result
+    # loop through the list
+    for i in arr:
+        # make a variable to be integer version of i
+        y = int(i)
 
-print(common_divisors(15,30))
+        # append and cast to string the squared digit
+        result.append(str(y*y))
+
+    # create a newString that is the joined result list
+    newStr = ''.join(result)
+
+    return int(newStr)
+
+print(square_digits(13))
