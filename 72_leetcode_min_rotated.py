@@ -1,14 +1,10 @@
-def leetcode_find_min_rotated_array(list):
-    # edgecase: if list is empty
-    if not list:
-        return 'please add elements to list'
+def truncate_str(str, num):
+    # edgecase: if string is empty or num is negative
+    if not str or str.isspace():
+        return 'please add letters to string'
+    if num < 0:
+        return 'please only use positive numbers'
 
-    # select and save the 1st element's value from the list
-    index = list[0]
+    return str[0:num] + '...'
 
-    # slice the array at whichever index is the first element's value
-    list = list[index:len(list)] + list[0:index]
-
-    return min(list)
-
-print(leetcode_find_min_rotated_array([3,4,5,6,7]))
+print(truncate_str('hello', 3))
