@@ -1,14 +1,18 @@
-def leetcode_minimum_rotated(list):
-    # define what index we're going to rotate by based off first element
-    index = list[0]
+def common_divisors(num1, num2):
+    # edgecase: if both numbers aren't negative or positive
+    if num1 < 0 and num2 > 0:
+        return 'please only use positive or negative numbers'
+    if num1 > 0 and num2 < 0:
+        return 'please only use positive or negative numbers'
 
-    # rotate the list by index #
-    # slice off index to end, then add the elements from 0 to index
-    # 3,4,5,6,7 --> 6,7,3,4,5
-    # 6 = element at index 3 (3=0, 4=1, 5=2, 6=3)
-    # 6,7 + 3,4,5 
-    result = list[index:len(list)] + list[0:index]
+    # create a result list to return
+    result = []
 
-    return min(result)
+    # loop from 2 to num2, including num2
+    for i in range(2, num2+1):
+        if num1 % i == 0 and num2 % i == 0:
+            result.append(i)
 
-print(leetcode_minimum_rotated([3,4,5,6,7]))
+    return result
+
+print(common_divisors(15,30))
