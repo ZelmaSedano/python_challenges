@@ -1,25 +1,23 @@
 def square_digits(num):
-    # edgecase: if num is negative, can't square
+    # edgecase: if num is negative
     if num < 0:
         return 'please only use positive numbers'
 
-    # create a variable that you can return
+    # create a result variable to return
     result = []
 
-    # cast num into a string and split it into a list
+    # create a string version of num and split it 
     arr = list(str(num))
 
-    # loop through the list
+    # loop through list
     for i in arr:
-        # make a variable to be integer version of i
+        # create an int version of i
         y = int(i)
 
-        # append and cast to string the squared digit
+        # square y and append to result
         result.append(str(y*y))
 
-    # create a newString that is the joined result list
-    newStr = ''.join(result)
+    # join the list and convert to int
+    return int(''.join(result))
 
-    return int(newStr)
-
-print(square_digits(13))
+print(square_digits(29))
