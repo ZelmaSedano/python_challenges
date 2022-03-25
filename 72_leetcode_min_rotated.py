@@ -1,3 +1,5 @@
+https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+
 def truncate_str(str, num):
     # edgecase: if string is empty or num is negative
     if not str or str.isspace():
