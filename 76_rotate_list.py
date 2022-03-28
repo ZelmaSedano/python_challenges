@@ -1,4 +1,4 @@
-def rotate_list_left(list, num):
+def rotate_list_right(list, num):
     # edgecase: if list is empty or num is negative
     if not list and num < 0:
         return 'please add elements to list and make sure to use postiive numbers for 2nd arg'
@@ -10,4 +10,4 @@ def rotate_list_left(list, num):
     result = list[len(list)-num:len(list)] + list[0:len(list)-num]
     return result
 
-print(rotate_list_left([0,1,2,3,4], 1))
+print(rotate_list_right([0,1,2,3,4], 1))
