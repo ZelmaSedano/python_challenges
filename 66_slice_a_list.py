@@ -1,11 +1,15 @@
+# slice a list at a certain stop and start point
 def slice_list(list, start, stop):
-    # edgecase: if list is empty or start and stop are negative numbers
+    # edgecases: if list is empty, if start is negative, and stop is negative or past edge
     if not list:
         return 'please add elements to list'
-    if start < 0 or stop < 0:
-        return 'only positive numbers can be used as arguments'
+    if start < 0:
+        return 'please only use positive numbers'
+    if stop < 0:
+        return 'please only use positive numbers'
+    if stop > len(list):
+        return 'please use a smaller number, the list is not list long'
 
-    # return the sliced list
     return list[start:stop]
 
-print(slice_list([0,1,2,3,4,5], 0, 3))
+print(slice_list([1,2,3,4,5], 0, 7))
