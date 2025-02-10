@@ -1,5 +1,4 @@
-def repeat_string():
-  str = 'hi'
-  print(str*3)
+def repeat_string (str, num):
+    return (str*num)
 
-repeat_string();
+print(repeat_string('no', 3))
