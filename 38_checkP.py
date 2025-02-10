@@ -1,6 +1,6 @@
 def checkP(str):
-    if not str or str.isspace():
-        return 'please add some letters to your string'
+    if len(str) == 0 or 
+    
     # create a counter variable
     count = 0
 
@@ -13,4 +13,4 @@ def checkP(str):
 
     return count == 0
 
-print(checkP(' '))
+print(checkP('hi'))
