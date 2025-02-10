@@ -1,6 +1,4 @@
 def reverseString(str): 
-  reversed = str[::-1]
+    return str[::-1]
 
-  print(reversed)
-
-reverseString('hi')
+print(reverseString('hi'))
