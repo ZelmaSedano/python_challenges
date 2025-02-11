@@ -17,8 +17,10 @@ def RepeatingFunc(myStr):
 # simpler brute-force solution
 def firstUniqChar(string):
 	for i in range(len(string)):
+	
 	char = string[i]
-		if string.count(char) == 1:
+	
+	if string.count(char) == 1:
 		return char
 
 	return None
