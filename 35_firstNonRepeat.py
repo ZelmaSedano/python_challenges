@@ -16,6 +16,7 @@ def RepeatingFunc(myStr):
 
 # simpler brute-force solution
 def firstUniqChar(string):
+	# loop through the string
 	for i in range(len(string)):
 	
 	char = string[i]
