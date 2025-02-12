@@ -14,14 +14,15 @@ def RepeatingFunc(myStr):
 			return c
 	return None
 
-# simpler brute-force solution
-def firstUniqChar(string):
-	# loop through the string
-	for i in range(len(string)):
-	
-	char = string[i]
-	
-	if string.count(char) == 1:
-		return char
+# brute forc eapproach
+def first_non_repeat(str):
+    # loop through the range/string
+    # this creates a range/numbers the length of the string
+    # range generates a sequence of numbers from 0 to len(string) -1
+    for i in range(len(str)):
+        if str.count(str[i]) == 1:
+            return str[i]
 
-	return None
+    return 'no non-repeating characters'
+
+print(first_non_repeat('hih'))
