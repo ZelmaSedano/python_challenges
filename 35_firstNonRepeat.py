@@ -1,18 +1,23 @@
 # more robust solution
-def RepeatingFunc(myStr):
-	char_order = []
-	counts = {}
 
-	for c in myStr:
-		if c in counts:
-			counts[c] += 1
-		else:
-			counts[c] = 1
-			char_order.append(c)
-	for c in char_order:
-		if counts[c] == 1:
-			return c
-	return None
+def first_non_repeat(s):
+    arr = {}  # Use a dictionary to store character counts
+    
+    # First loop: Count occurrences of each character
+    for char in s:
+        if char in arr:
+            arr[char] += 1
+        else:
+            arr[char] = 1
+    
+    # Second loop: Find the first non-repeating character
+    for char in s:
+        if arr[char] == 1:  # Looking for a count of 1, not 2
+            return char  # Return the first unique character
+    
+    return -1  # Return -1 if no unique character is found
+
+print(first_non_repeat('hih'))
 
 # brute forc eapproach
 def first_non_repeat(str):
