@@ -25,6 +25,7 @@ def first_non_repeat(str):
     # this creates a range/numbers the length of the string
     # range generates a sequence of numbers from 0 to len(string) -1
     for i in range(len(str)):
+        # count the occurrence of the char in the string
         if str.count(str[i]) == 1:
             return str[i]
 
