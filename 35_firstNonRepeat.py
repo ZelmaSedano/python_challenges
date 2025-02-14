@@ -1,5 +1,3 @@
-# more robust solution
-
 def first_non_repeat(s):
     arr = {}  # Use a dictionary to store character counts
     
@@ -15,11 +13,13 @@ def first_non_repeat(s):
         if arr[char] == 1:  # Looking for a count of 1, not 2
             return char  # Return the first unique character
     
-    return -1  # Return -1 if no unique character is found
+    # Return -1 if no unique character is found
+    return 'no non-repeating characters'
 
 print(first_non_repeat('hih'))
 
-# brute forc eapproach
+
+# brute force eapproach
 def first_non_repeat(str):
     # loop through the range/string
     # this creates a range/numbers the length of the string
