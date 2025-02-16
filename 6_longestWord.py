@@ -1,15 +1,16 @@
-def longestWord(str):
-    if not str:
-        return 'please add words to string'
-    # create empty longest variable
+def longest_word(str):
+    # create a longest word variable
     longest = ''
-    # split the str into list of words
-    list = str.split(' ')
 
-    for i in list:
+    # split the string into words
+    words = str.split(' ')
+
+    # loop through the words list
+    # since it's a list of words, you don't need to make a range b/c i = word
+    for i in words:
         if len(i) > len(longest):
             longest = i
 
     return longest
 
-print(longestWord(''))
+print(longest_word('hi there'))
