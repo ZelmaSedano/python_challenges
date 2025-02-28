@@ -1,4 +1,8 @@
-def confirmEnding(str, target):
-    return str.endswith(target)
+def confirm_ending(string, target):
+    return string.endswith(target)
 
-print(confirmEnding('hi', 'i'))
+# you don't need an argument with this, you use fixtures
+def test_confirm_ending():
+    # assert is a keyword, not a func
+    assert confirm_ending('hi', 'i')
+    
