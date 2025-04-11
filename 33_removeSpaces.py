@@ -1,4 +1,4 @@
-def removeSpaces(str):
+def remove_spaces(str):
   if not str or str.isspace():
     return 'please add some words to string'
 
