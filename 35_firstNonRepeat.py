@@ -1,3 +1,17 @@
+# brute force eapproach
+def first_non_repeat(str):
+    # loop through the range/string
+    # this creates a range/numbers the length of the string
+    # range generates a sequence of numbers from 0 to len(string) -1
+    for i in range(len(str)):
+        # count the occurrence of the char in the string
+        if str.count(str[i]) == 1:
+            return str[i]
+
+    return 'no non-repeating characters'
+
+print(first_non_repeat('hih'))
+
 def first_non_repeat(s):
     arr = {}  # Use a dictionary to store character counts
     
@@ -14,21 +28,6 @@ def first_non_repeat(s):
             return char  # Return the first unique character
     
     # Return -1 if no unique character is found
-    return 'no non-repeating characters'
-
-print(first_non_repeat('hih'))
-
-
-# brute force eapproach
-def first_non_repeat(str):
-    # loop through the range/string
-    # this creates a range/numbers the length of the string
-    # range generates a sequence of numbers from 0 to len(string) -1
-    for i in range(len(str)):
-        # count the occurrence of the char in the string
-        if str.count(str[i]) == 1:
-            return str[i]
-
     return 'no non-repeating characters'
 
 print(first_non_repeat('hih'))
