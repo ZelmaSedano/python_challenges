@@ -1,12 +1,12 @@
 # brute force eapproach
-def first_non_repeat(str):
+def first_non_repeat(string):
     # loop through the range/string
     # this creates a range/numbers the length of the string
     # range generates a sequence of numbers from 0 to len(string) -1
-    for i in range(len(str)):
+    for i in range(len(string)):
         # count the occurrence of the char in the string
-        if str.count(str[i]) == 1:
-            return str[i]
+        if string.count(string[i]) == 1:
+            return string[i]
 
     return 'no non-repeating characters'
 
