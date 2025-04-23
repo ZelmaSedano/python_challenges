@@ -9,6 +9,11 @@ def first_non_repeat(string):
         # it'll be the first non-repeat since we're looping through
         if string.count(i) == 1:
             return i
+            
+    # EVEN SIMPLER, no math logic
+    for num in list:
+        if num+1 not in list:
+            return num+1
         
     # if there are no non-repeating chars
     return 'no non-repeating characters'
