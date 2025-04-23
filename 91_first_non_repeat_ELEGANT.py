@@ -1,19 +1,23 @@
-def first_non_repeat(s):
-    arr = {}  # Use a dictionary to store character counts
+def first_non_repeat(string):
+    # Create a dictionary to count character occurrences
+    char_count = {}
     
-    # First loop: Count occurrences of each character
-    for char in s:
-        if char in arr:
-            arr[char] += 1
+    # First pass: count each character's occurrences
+    for char in string:
+        # if char is present in char_count list, += 1 to it
+        if char in char_count:
+            char_count[char] += 1
+        # if char isn't present in char_count list, add it with a value of 1
         else:
-            arr[char] = 1
+            char_count[char] = 1
     
-    # Second loop: Find the first non-repeating character
-    for char in s:
-        if arr[char] == 1:  # Looking for a count of 1, not 2
-            return char  # Return the first unique character
+    # Second pass: find the first character with count 1
+    for char in string:
+        if char_count[char] == 1:
+            return char
     
-    # Return -1 if no unique character is found
-    return 'no non-repeating characters'
+    return 'no non-repeating chars'
 
-print(first_non_repeat('hih'))
+print(first_non_repeat('hii'))  # Should return 'h'
+print(first_non_repeat('hello'))  # Should return 'h'
+print(first_non_repeat('aabbcc'))  # Should return 'no non-repeating chars'
