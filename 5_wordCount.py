@@ -1,8 +1,12 @@
 def word_count(string):
-    # split on single spaces and filter out empty strings
+    # Split the string into a list of words, handling empty strings:
+    # 1. `string.split(' ')` splits on individual spaces, creating empty strings 
+    #    for consecutive/multiple spaces (e.g., 'hi   there' → ['hi', '', '', 'there'])
+    # 2. The list comprehension filters out empty strings (`if word != ''`)
     words = [word for word in string.split(' ') if word != '']
     
-    # return the length of the list
+    # Return the count of remaining valid words
     return len(words)
 
+# Test case: Trailing spaces demonstrate whitespace handling
 print(word_count('hi there    '))  # Output: 2
