@@ -9,5 +9,4 @@ def word_count(string):
     # Return the count of remaining valid words
     return words
 
-# Test case: Trailing spaces demonstrate whitespace handling
-print(word_count('hi there    '))  # Output: 2
+print(word_count('hi there    '))  
