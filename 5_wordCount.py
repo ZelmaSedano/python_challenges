@@ -4,9 +4,17 @@ def word_count(string):
     # 2. The list comprehension filters out empty strings (`if word != ''`)
     # list comprehension creates a new list based on the values of an existing list
     # if the word in string ISN'T an empty string
-    words = [word for word in string.split(' ') if word != '']
+
+    # elegant version
+    # words = [word for word in string.split(' ') if word != '']
+    
+    words = []
+    for word in string.split(' '):
+        if word != '':
+            words.append(word)
+    # if word isn't a space, add it to a new array called 'words'
     
     # Return the count of remaining valid words
-    return words
+    return len(words)
 
-print(word_count('hi there    '))  
+print(word_count('hi there    ')) 
