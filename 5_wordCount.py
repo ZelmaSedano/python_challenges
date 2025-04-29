@@ -5,7 +5,7 @@ def word_count(string):
     # list comprehension creates a new list based on the values of an existing list
     # if the word in string ISN'T an empty string
 
-    # elegant version
+    # list comprehension version
     # words = [word for word in string.split(' ') if word != '']
 
     # create an empty array/list, which we'll push letters/words into
