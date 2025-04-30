@@ -7,7 +7,7 @@ def first_non_repeat(string):
     for i in string:
         # if the current element's value count is 1, return it
         # it'll be the first non-repeat since we're looping through
-        if string.count(i) == 1:
+        if char != ' ' and string.count(i) == 1:
             return i
             
     # EVEN SIMPLER, no math logic
