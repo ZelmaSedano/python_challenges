@@ -1,16 +1,22 @@
-def longest_word(str):
-    # create a longest word variable
-    longest = ''
-
-    # split the string into words
-    words = str.split(' ')
-
-    # loop through the words list
-    # since it's a list of words, you don't need to make a range b/c i = word
-    for i in words:
-        if len(i) > len(longest):
-            longest = i
-
+def longest_word(string):
+    # Step 1: Remove extra spaces at start and end
+    string1 = string.strip()
+    
+    # Step 2: Split into words (automatically handles multiple spaces between words)
+    words = string1.split()
+    
+    # Step 3: Check if we got any words
+    if not words:  # If the list is empty
+        return "No words found"
+    
+    # Step 4: Find the longest word
+    longest = words[0]  # Start with the first word
+    
+    for word in words:
+        if len(word) > len(longest):
+            longest = word
+    
     return longest
 
-print(longest_word('hi there'))
+# Test the function
+print(longest_word('hi there     bub'))  # Output: 'there'
