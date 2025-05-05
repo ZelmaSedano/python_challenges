@@ -8,17 +8,9 @@ def word_count(string):
     # list comprehension version
     # words = [word for word in string.split(' ') if word != '']
 
-    # create an empty array/list, which we'll push letters/words into
-    words = []
+    return len(string.split())
 
-    string1 = string.split(' ')
-    # loop through the string
-    for i in string1:
-        if i != '':
-            words.append(i)
-
-    return len(words)
-
+print(word_count('hi     there'))
 print(word_count('hi there'))
 
 print(word_count('hi there    ')) 
