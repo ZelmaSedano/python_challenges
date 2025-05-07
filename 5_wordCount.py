@@ -8,9 +8,12 @@ def word_count(string):
     # list comprehension version
     # words = [word for word in string.split(' ') if word != '']
 
-    return len(string.split())
+     # split the string into a list of words
+    words = string.split()
 
-print(word_count('hi     there'))
-print(word_count('hi there'))
+    # do we need to loop?
+    # no, because we already have a clean list to return the length of
+    return len(words)
 
-print(word_count('hi there    ')) 
+print(word_count('hi     there')) # result: 2
+print(word_count('hi there    ')) # result: 2
