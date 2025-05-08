@@ -1,8 +1,8 @@
-def find_divisors(num=None):
-    if num == None:
+def find_divisors(int_=None):
+    if int_ == None:
         return 'please enter a number'
 
-   # create an empty divisors array
+    # create an empty divisors array
     divisors = []
 
     # loop from 2 to int, 1 will always divide into int_
@@ -18,3 +18,4 @@ def find_divisors(num=None):
         return divisors
     
 print(find_divisors(18))
+
