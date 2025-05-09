@@ -1,4 +1,5 @@
 def remove_long_between_spaces(string):
-  return ''.join(string.split(' '))
+    # make sure to put space between quotes for join to maintain separate words
+    return ' '.join(string.split())
 
-print(remove_long_between_spaces('hi     there')
+print(remove_long_between_spaces('hi     there'))
