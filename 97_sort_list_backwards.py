@@ -1,4 +1,7 @@
-def sort_array_backwards(lst):
-    return lst[::-1]
+def sorted_backwards(lst):
+    # first sort the list
+    lst1 = sorted(lst)
 
-print(sort_array_backwards([1,2,3,4]))
+    return lst1[::-1]
+
+print(sorted_backwards([3,33333,33,-2]))
