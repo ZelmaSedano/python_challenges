@@ -1,8 +1,8 @@
+# import the math library
 import math
 
-def calculate_square_root(number):
-    if number < 0:
-        return None
-    return round(math.sqrt(number), 5)
+def square_root(num):
+    # return the square root with 3 decimal points
+    return round(math.sqrt(num), 3)
 
-print(calculate_square_root(16))  
+print(square_root(18))
