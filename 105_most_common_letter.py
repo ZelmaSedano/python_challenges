@@ -1,12 +1,16 @@
 def most_common_letter(string):
-    letter_count = {}
+    # create a dictionary to push the string & value into
+    most_common = {}
 
-    for c in string:
-        if c in letter_count:
-            letter_count[c] += 1
+    # loop through the string:
+    for i in string:
+        # if the character already exists in the dictionary, add to its value
+        if i in most_common:
+            most_common[i] += 1
         else:
-            letter_count[c] = 1
+            # adds the i element with a value of 1
+            most_common[i] = 1
 
-    return max(letter_count, key=letter_count.get)
+    return max(most_common, key=most_common.get)
 
-print(most_common_letter('hiiiieeeee'))
+print(most_common_letter('hiii'))
